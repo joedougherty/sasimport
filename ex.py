@@ -2,7 +2,7 @@ from sasimport import Dataset, SASFile
 
 rawdata = '/path/to/rawdata.txt'
 libpath = '/path/to/sas/libname'
-sasprog = '/path/to/generated/sasscript'
+sasprog = '/path/to/generated/sasscript.sas'
 
 ds = Dataset(infile=rawdata, delimiter='tab', dsd=True, libname='comscore', libpath=libpath, dsname='test')
 
