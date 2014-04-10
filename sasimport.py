@@ -1,4 +1,5 @@
 import subprocess
+import re
 
 class Dataset(object):
     variable_list = []
