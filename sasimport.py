@@ -1,3 +1,5 @@
+import subprocess
+
 class Dataset(object):
     variable_list = []
     lengths = []
@@ -129,3 +131,8 @@ class SASFile(object):
         f = open(self.file_location, 'w')
         f.write(self.code_string)
         f.close()
+
+    def run(self):
+        logfile = re.sub('sas$', 'log', self.file_location)
+        invocation = ['sas', self.file_location, '-log', logfile]
+        subprocess.call(invocation)
