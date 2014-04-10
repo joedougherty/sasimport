@@ -12,4 +12,5 @@ ds.variable(name='datestamp', type='num', informat='yymmdd10.', format='yymmddn8
 ds.variable(name='timestamp', type='num', informat='time8.', format='time8.', label='Time Entered')
 
 sas = SASFile(sasprog, ds.generate())
-sas.output()
+sas.output() # Create SAS File
+sas.run()    # Run SAS program -> defaults logfile to same dir as sasprog
