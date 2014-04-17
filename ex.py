@@ -4,7 +4,7 @@ rawdata = '/path/to/rawdata.txt'
 libpath = '/path/to/sas/libname'
 sasprog = '/path/to/generated/sasscript.sas'
 
-ds = Dataset(infile=rawdata, delimiter='tab', dsd=True, libname='comscore', libpath=libpath, dsname='test')
+ds = Dataset(infile=rawdata, delimiter='tab', dsd=True, libname='test', libpath=libpath, dsname='test')
 
 # Variable order maps to column order (from left to right) of the raw data source.
 # "name" is the only required argument
