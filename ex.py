@@ -6,6 +6,8 @@ sasprog = '/path/to/generated/sasscript.sas'
 
 ds = Dataset(infile=rawdata, delimiter='tab', dsd=True, libname='comscore', libpath=libpath, dsname='test')
 
+# Variable order maps to column order (from left to right) of the raw data source.
+# "name" is the only required argument
 ds.variable(name='uid', type='num', length='5', informat='19.', format='19.', label='Unique Identifier')
 ds.variable(name='desc', type='char', length='18', informat='18.', format='18.', label='Description')
 ds.variable(name='datestamp', type='num', informat='yymmdd10.', format='yymmddn8.', label='Date Entered')
